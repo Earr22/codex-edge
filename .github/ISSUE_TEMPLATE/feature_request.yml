@@ -1,0 +1,28 @@
+name: Feature request
+description: Propose a narrowly scoped improvement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Include the safety boundary and how the behavior could be verified.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope acknowledgement
+      options:
+        - label: I understand v0.1 supports Windows Codex Desktop only; CLI is experimental and IDE/macOS/Linux are unsupported.
+          required: true
+        - label: This request does not require credential, cookie, token, browser-history, profile, or local/session-storage access.
+          required: true
