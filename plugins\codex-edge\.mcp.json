@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "codex_edge_node_repl": {
+      "title": "Codex Edge Node REPL",
+      "description": "Starts the local Codex Node REPL and loads the official browser client from this machine.",
+      "cwd": ".",
+      "command": "node",
+      "args": [
+        "./scripts/start-node-repl.mjs"
+      ]
+    }
+  }
+}

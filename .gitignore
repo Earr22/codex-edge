@@ -1,0 +1,26 @@
+# Local diagnostics and secrets
+*.log
+*.tmp
+*.bak
+.env
+.env.*
+!.env.example
+
+# Dependencies and test artifacts
+node_modules/
+coverage/
+.nyc_output/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Never commit copied upstream runtime files
+**/browser-client.mjs
+**/node_repl.exe
+**/extension-host.exe
+**/chrome-native-hosts-v2.json
+**/com.openai.codexextension.json

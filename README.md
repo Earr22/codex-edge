@@ -140,4 +140,3 @@ OpenAI's Codex, browser client, browser documentation, and ChatGPT browser exten
 ## Disclaimer
 
 This compatibility layer relies on undocumented or unsupported product behavior and can stop working after a Codex Desktop or extension update. Keep Codex Desktop updated, review every repair preview, and report reproducible failures without attaching credentials or raw private paths.
-

@@ -1,0 +1,37 @@
+{
+  "name": "codex-edge",
+  "version": "0.1.0",
+  "description": "Unofficial Windows compatibility plugin for controlling Microsoft Edge from Codex Desktop.",
+  "author": {
+    "name": "Earr22",
+    "url": "https://github.com/Earr22"
+  },
+  "homepage": "https://github.com/Earr22/codex-edge",
+  "repository": "https://github.com/Earr22/codex-edge",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "microsoft-edge",
+    "browser-automation",
+    "windows"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Codex Edge (Unofficial)",
+    "shortDescription": "Use Microsoft Edge from Codex on Windows.",
+    "longDescription": "Routes Codex browser tasks explicitly to Microsoft Edge and provides privacy-conscious diagnostics for the local browser bridge. Requires Codex Desktop and the official ChatGPT browser extension installed in Edge.",
+    "developerName": "Earr22",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Microsoft Edge to work with the current page.",
+      "Open this public website in Edge and inspect it.",
+      "Diagnose my Codex Edge connection without changing files."
+    ]
+  }
+}
