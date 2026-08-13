@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, realpath, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -11,6 +11,14 @@ import {
   resolveOfficialRuntime,
   sha256File,
 } from "../plugins/codex-edge/scripts/runtime-locator.mjs";
+
+async function assertSamePath(actual, expected) {
+  const [actualReal, expectedReal] = await Promise.all([realpath(actual), realpath(expected)]);
+  assert.equal(
+    process.platform === "win32" ? actualReal.toLowerCase() : actualReal,
+    process.platform === "win32" ? expectedReal.toLowerCase() : expectedReal,
+  );
+}
 
 async function fixture() {
   const root = join(tmpdir(), `codex-edge-test-${process.pid}-${Date.now()}`);
@@ -46,14 +54,14 @@ test("finds the official-style client and Node REPL without copying them", async
 
   const browserClient = await findBrowserClient({ env: f.env, manifestPath: f.manifestPath });
   const nodeRepl = await findNodeRepl({ env: f.env, manifestPath: f.manifestPath });
-  assert.equal(browserClient.path, f.clientPath);
+  await assertSamePath(browserClient.path, f.clientPath);
   assert.equal(browserClient.source, "official-cache-chrome");
-  assert.equal(nodeRepl.path, f.nodeReplPath);
+  await assertSamePath(nodeRepl.path, f.nodeReplPath);
   assert.equal(nodeRepl.source, "official-runtime");
 
   const combined = await resolveOfficialRuntime({ env: f.env, manifestPath: f.manifestPath });
-  assert.equal(combined.browserClient.path, f.clientPath);
-  assert.equal(combined.nodeRepl.path, f.nodeReplPath);
+  await assertSamePath(combined.browserClient.path, f.clientPath);
+  await assertSamePath(combined.nodeRepl.path, f.nodeReplPath);
 });
 
 test("rejects a client that lacks packaged documentation", async (t) => {
