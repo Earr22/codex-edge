@@ -1,0 +1,4 @@
+interface:
+  display_name: "Control Edge"
+  short_description: "Use Microsoft Edge from Codex on Windows"
+  default_prompt: "Use $control-edge to complete this task in Microsoft Edge."
