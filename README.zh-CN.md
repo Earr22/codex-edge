@@ -4,6 +4,10 @@
 
 [English](README.md) · [中文 Agent 安装提示词](INSTALL_WITH_AGENT.zh-CN.md) · [安全说明](SECURITY.md) · [隐私说明](PRIVACY.md)
 
+[![测试](https://github.com/Earr22/codex-edge/actions/workflows/test.yml/badge.svg)](https://github.com/Earr22/codex-edge/actions/workflows/test.yml) [![许可证：MIT](https://img.shields.io/badge/License-MIT-45d4ff.svg)](LICENSE)
+
+![Codex Edge 在无登录的公开网页中控制一个专用 Edge 标签页](assets/codex-edge-demo.gif)
+
 Codex Edge 最初是个人使用的小工具，现在作为独立开源项目分享。它与 OpenAI、Microsoft 没有隶属、背书或官方支持关系。
 
 它不会把 Edge 当作 Chrome 的模糊替代，而是明确要求 Codex 选择 Microsoft Edge；同时从用户自己的 Codex 安装中动态定位官方浏览器运行文件，不把 OpenAI 的专有客户端和文档复制进本仓库。

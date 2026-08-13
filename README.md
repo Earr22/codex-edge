@@ -4,6 +4,10 @@
 
 [中文说明](README.zh-CN.md) · [Agent install prompt](INSTALL_WITH_AGENT.md) · [Security](SECURITY.md) · [Privacy](PRIVACY.md)
 
+[![Tests](https://github.com/Earr22/codex-edge/actions/workflows/test.yml/badge.svg)](https://github.com/Earr22/codex-edge/actions/workflows/test.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-45d4ff.svg)](LICENSE)
+
+![Codex Edge controlling a dedicated Edge tab on public, non-authenticated pages](assets/codex-edge-demo.gif)
+
 Codex Edge makes Edge an explicit browser target for Codex. It uses the official ChatGPT browser extension already installed in your Edge profile, loads the official browser runtime from your own Codex installation, and refuses to silently fall back to Chrome or the in-app browser.
 
 This started as a personal tool. It is now shared as an independent open-source project. It is not affiliated with, endorsed by, or supported by OpenAI or Microsoft.
